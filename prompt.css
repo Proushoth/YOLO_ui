@@ -1,0 +1,9 @@
+.categories#Movies {
+    display: inline-block; /* Display links as individual block elements */
+    width: 100%; /* Ensure each link takes up full width */
+    text-align: center; /* Center link text within the box */
+    background-color: #f0f0f0; /* Add a background color (optional) */
+    border: 1px solid #ccc; /* Add a border (optional) */
+    padding: 10px 20px; /* Add padding for spacing */
+    margin-bottom: 10px; /* Add spacing between boxes */
+  }

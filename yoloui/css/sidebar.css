@@ -1,0 +1,77 @@
+@import url('colors.css');
+
+body {
+    background: linear-gradient(rgba(16, 5, 48, 0.9), rgba(16, 5, 48, 0.8)), url('../assets/bg.jpg');
+    background-color: rgb(6, 0, 17);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    position: fixed;
+    text-align: center;
+    transition: .3s ease;
+    overflow: hidden;
+}
+.menu-option a{
+    text-decoration: none;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.menu-option i{
+    color: white;
+    margin-right: 15px;
+}
+.menu-option{
+    font-size: 12px;
+    padding: 15px;
+    background-color: rgb(15, 9, 66);
+    margin: 5px;
+    min-width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.side-parent{
+    margin-top: 20px;
+    text-align: left;
+}
+.pop i, .close i{
+    color: white;
+    font-size: 25px;
+    
+}
+
+.pop{
+    background-color: var(--background-color);
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 150px;
+    width: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.close{
+    background-color: var(--background-color);
+    padding: 10px;
+    margin-top: -45px;
+    margin-left: 160px;
+    width: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+.logo img{
+    height: 70px;    
+}
+.content{
+    padding: 20px;
+}

@@ -1,0 +1,64 @@
+@import url('colors.css');
+
+.content .prompt textarea{
+    width: 95%;
+    margin: 10px;
+    background-color: var(--input-bg);
+    border-radius: 10px;
+    border: none;
+    color:  white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.prompt-text{
+    color:  white;
+    margin-left: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.content{
+    text-align: center;
+    align-items: center;
+    justify-content: centers;
+}
+.prompt-submit{
+    width: 65%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background-color: var(--main-button);
+    color: white;
+    border:  none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.movies, .songs, .ytvideos, .anime, .manga{
+    display: none;
+    width: 95%;
+    height: 500px;
+    background-color: var(--input-bg);
+    border-radius: 10px;
+    margin-left: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.movies{
+    display: block;
+}
+.b-set{
+    display: inline-flex;
+}
+.types{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 95%;
+    color: white;
+    background-color: var(--input-bg);
+    border: none;
+}
+.types:focus{
+    outline: none;
+    border: none;
+}
+

@@ -1,0 +1,116 @@
+@import url('colors.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    background: linear-gradient(rgba(16, 5, 48, 0.9), rgba(16, 5, 48, 0.8)), url('../assets/bg.jpg');
+    background-color: rgb(6, 0, 17);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 13px;
+
+}
+
+.registration-container {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    min-width: 250px;
+    max-width: 400px;
+    margin-top: 40px;
+}
+.inline{
+    display: inline-flex;
+    width: 100%;
+}
+.check{
+    width: 15px;
+}
+.term{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: var(--heading-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid var(--input-bg);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: #fff;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--main-button);
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--main-button-hover);
+}
+
+.logo{
+    width: 200px;
+}
+.block{
+    display: block;
+}
+.btn{
+    background-color: var(--main-button);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+.redirect{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    padding-top: 10px;
+    margin-top: 10px;
+}

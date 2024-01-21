@@ -31,14 +31,14 @@ function getKeys() {
 
         if(materialType == "movie" || materialType == "tv"){
             getMoviesOrTvs()
-        }if(materialType == "song" || materialType == "video"){
+        }else if(materialType == "songs" || materialType == "video"){
             getSongsOrVideos()
-        }if(materialType == "books"){
+        }else if(materialType == "books"){
             getBooks()
-        }if(materialType == "anime-movie" || materialType == "anime-tv"){
+        }else if(materialType == "anime-movie" || materialType == "anime-tv"){
             getAnime()
         }else{
-            alert("materil type not valid")
+            alert("material type not valid")
         }
 
 
@@ -55,13 +55,118 @@ function readKeywords(){
 
 //get all the materilas to show case in the show area
 function getSongsOrVideos(){
+    // Sample JSON object for the request
+    const sampleRequest = {
+        keywords: Cookies.get('keywords'),
+        media_type: materialType
+    };
 
+    // Convert the sample request to a query string
+    const queryString = Object.keys(sampleRequest)
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(sampleRequest[key])}`)
+        .join('&');
+
+    // Make the API call to http://localhost:5000/songs
+    fetch(`http://localhost:5000/songs?${queryString}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        // Check if the request was successful (status code 200)
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        }
+    })
+    .then(data => {
+        // Console log the response
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('An unexpected error occurred:', error);
+    });
 }
 function getBooks(){
+    // Sample JSON object for the request
+    const sampleRequest = {
+        keywords: Cookies.get('keywords')
+    };
+
+    // Convert the sample request to a query string
+    const queryString = Object.keys(sampleRequest)
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(sampleRequest[key])}`)
+        .join('&');
+
+    // Make the API call to http://localhost:5000/books
+    fetch(`http://localhost:5000/books?${queryString}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        // Check if the request was successful (status code 200)
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        }
+    })
+    .then(data => {
+        // Console log the response
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('An unexpected error occurred:', error);
+    });
+
     
 }
 function getAnime(){
-    
+    var md_type
+    if (materialType == "anime-movie"){
+        md_type = "movie"
+    }else if(materialType == "anime-tv"){
+        md_type = "tv"
+    }
+
+    // Sample JSON object for the request
+    const sampleRequest = {
+        keywords: Cookies.get('keywords'),
+        media_type: md_type
+    };
+
+    // Convert the sample request to a query string
+    const queryString = Object.keys(sampleRequest)
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(sampleRequest[key])}`)
+        .join('&');
+
+    // Make the API call to http://localhost:5000/anime
+    fetch(`http://localhost:5000/anime?${queryString}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        // Check if the request was successful (status code 200)
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        }
+    })
+    .then(data => {
+        // Console log the response
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('An unexpected error occurred:', error);
+    });
+
 }
 
 

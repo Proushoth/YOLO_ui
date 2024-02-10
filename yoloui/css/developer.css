@@ -1,0 +1,162 @@
+.load{
+    display: none;
+}
+
+.content h2{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 10%;
+}
+
+.mob-area{
+    background-color: var(--background-color);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    min-width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+    min-height: 40vh;
+}
+.mob-area input{
+    width: 80%;
+    background-color: var(--input-bg);
+    margin: 10px;
+    padding: 20px;
+    border: none;
+    color: white;
+}
+.mob-area .copy{
+    float: right;
+    margin: 10px;
+    margin-right: 27px;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50px;
+    background-color: var(--input-bg);
+    color: white;
+    border: none;
+}
+.generate{
+    width: 300px;
+    background: var(--main-button);
+    border: none;
+    border-radius: 10px;
+    padding: 9px;
+    margin: 10px;
+    color: white;
+}
+.more{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px
+}
+.more img{
+    height: 100px;
+    width: 50px;
+}
+.ics{
+    color: white;
+    font-size: 80px;
+    margin: 10px;
+
+}
+
+.usage span, .docs span{
+    color:  white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+}
+
+/* CSS for Checkout Page */
+.price{
+    background-color: green;
+    max-width: 200px;
+    padding: 20px;
+    margin: 0 auto;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+.checkout {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.checkout p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.checkout-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+.checkout img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.topic{
+    color: white;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.parent-agree{
+    background-color: red;
+    width: 100%;
+}
+.stripe{
+    width: 200px;
+    height: 50px;
+    margin-right: 5px;
+    background: url("https://www.singersforhire.com.au/wp-content/uploads/2019/11/secure-stripe-payment-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+
+}
+.bt-set{
+    display: inline-flex;
+}
+
+.msg{
+    color: #fff;
+
+}
+.bx-sad, .bx-x{
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    color: white;
+}
+.bx-x{
+    color: red;
+}
+.checkout a button{
+    padding: 10px;
+    background-color: var(--main-button);
+    border: none;
+    border-radius: 7px;
+    color: white;
+    margin-bottom: 30px;
+}

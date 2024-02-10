@@ -17,4 +17,29 @@ function setTopicAndPrice(paymentType) {
     }
 }
 
+function premiumPay(){
+    
+    fetch('http://127.0.0.1:5000/create-checkout-session', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Check if the login was successful
+            if (data.success) {
+                // Redirect to prompt.html
+                window.location.href = 'prompt.html';
+            } else {
+                // Handle unsuccessful login (show error message, etc.)
+                alert('Login failed: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error during login:', error);
+        });
+}
+
 setTopicAndPrice(paymentType);

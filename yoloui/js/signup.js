@@ -78,3 +78,33 @@ document.addEventListener('DOMContentLoaded', function () {
         return true;
     }
 });
+
+
+// Function to fetch user's location and update the country and region fields
+function fetchUserLocation() {
+    // Using HTML5 Geolocation API to get user's location
+    navigator.geolocation.getCurrentPosition(success, error);
+}
+
+function success(position) {
+    // Fetch the user's position coordinates
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    // Using reverse geocoding API to get country and region
+    fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
+        .then(response => response.json())
+        .then(data => {
+            // Update the country and region input fields
+            document.getElementById('country').value = data.countryName;
+            document.getElementById('region').value = data.principalSubdivision;
+        })
+        .catch(error => console.log('Error fetching location: ', error));
+}
+
+function error() {
+    console.log('Error getting user location.');
+}
+
+// Call the fetchUserLocation function when the page loads
+fetchUserLocation();

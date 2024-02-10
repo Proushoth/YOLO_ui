@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO</title>
+    <link rel="stylesheet" href="css/prompt.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/developer.css">
+    <link rel="stylesheet" href="css/boost.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <!--sidebar loads here-->
+    </div>
+    <div class="content">
+        <div class="pop" onclick="openNav()"><i class='bx bxs-hand-right'></i></div>
+        <!--this is where my content should go-->
+        <div class="mob-area">
+            <div class="form-container">
+                <h2>Content Submission Form</h2>
+                <form id="content-form">
+                    <label for="content-type">Content Type:</label>
+                    <select id="content-type" name="content-type">
+                        <option value="movie">Movie</option>
+                        <option value="tv-series">TV Series</option>
+                        <option value="song">Song</option>
+                        <option value="anime-movie">Anime Movie</option>
+                        <option value="anime-tv">Anime TV</option>
+                        <option value="youtube-video">YouTube Video</option>
+                    </select>
+        
+                    <label for="content-url">Content Official URL:</label>
+                    <input type="url" id="content-url" name="content-url" required>
+        
+                    <label for="keywords">Keywords:</label>
+                    <div id="keywords-container">
+                        <textarea id="keywords" name="keywords" rows="4" required></textarea>
+                    </div>
+        
+                    <input type="hidden" id="hidden-keywords" name="hidden-keywords">
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+    <script src="js/boost.js"></script>    
+    <script src="js/sidebar.js"></script>
+</body>
+</html>

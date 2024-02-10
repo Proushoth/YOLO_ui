@@ -10,31 +10,21 @@
 </head>
 <body>
     <div class="sidebar" id="sidebar">
-        <div class="logo">
-            <img src="assets/logo.png" alt="">
-        </div>
-        <div class="close" onclick="closeNav()"><i class="fa-solid fa-square-xmark"></i></div>
-        <div class="side-parent">
-            <div class="menu-option"><i class="fa-solid fa-house"></i><a href="home.html">Prompt</a></div>
-            <div class="menu-option"><i class="fa-solid fa-star"></i><a href="home.html">My Preference</a></div>
-            <div class="menu-option"><i class="fa-solid fa-crown"></i><a href="home.html">Get Premium</a></div>
-            <div class="menu-option"><i class="fa-solid fa-palette"></i><a href="home.html">Content Creator Portal</a></div>
-            <div class="menu-option"><i class="fa-solid fa-code"></i><a href="developer.html">Developer Portal</a></div>
-        </div>
+        <!--sidebar loads here-->
     </div>
     <div class="content">
-        <div class="pop" onclick="openNav()" ><i class="fa-solid fa-square-plus"></i></div>
+        <div class="pop" onclick="openNav()" ><i class='bx bxs-hand-right'></i></div>
         <!--this is where my content should go-->
         <div class="mob-area">
             <h2>Hey Developers</h2>
             <input type="text"  value="3K4JB4H5VH4V4J6HVJ6HVJHV6JHV4" readonly id="inputField">
             <button class="generate">Generate me a New API Token</button>
-            <button onclick="copyText()" class="copy"><i class="fa-solid fa-copy"></i></button>
+            <button onclick="copyText()" class="copy"><i class='bx bxs-copy' ></i></button>
 
             <div class="more">
                 <div class="usage">
                     <a href="usage.html">
-                        <i class="fa-solid fa-chart-column ics"></i>
+                        <i class='bx bx-line-chart ics'></i>
                         <br>
                         <span>View Usage > </span>
                     </a>
@@ -42,7 +32,7 @@
                 <img src="assets/line (2).png" alt="">
                 <div class="docs">
                     <a href="docs.html">
-                        <i class="fa-solid fa-file-invoice ics"></i>
+                        <i class='bx bxs-file-doc ics' ></i>
                         <br>
                         <span>Read Docs > </span>
                     </a>
@@ -55,6 +45,5 @@
     <img src="assets/load.gif" alt="" class="load">
     <div class="overlay"></div>
     <script src="js/sidebar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>ss
 </body>
 </html>

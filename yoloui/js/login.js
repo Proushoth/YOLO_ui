@@ -23,6 +23,17 @@ document.addEventListener('DOMContentLoaded', function () {
             // Check if the login was successful
             if (data.success) {
                 // Redirect to prompt.html
+                // Assuming the response is stored in a variable named 'response'
+                var user = data.user;
+                var userEmail = data.email;
+                var userPassword = data.password;
+                var role = data.role;
+
+                // Set cookies for user data
+                Cookies.set("user", user, { expires: 7 }); 
+                Cookies.set("userEmail", userEmail, { expires: 7 }); 
+                Cookies.set("userPassword", userPassword, { expires: 7 }); 
+                Cookies.set("userRole", role, { expires: 7 });
                 window.location.href = 'prompt.html';
             } else {
                 // Handle unsuccessful login (show error message, etc.)

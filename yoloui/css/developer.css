@@ -140,9 +140,10 @@
 
 .msg{
     color: #fff;
+    font-family:Arial, Helvetica, sans-serif;
 
 }
-.bx-sad, .bx-x{
+.bx-sad, .bx-x, .bx-happy-heart-eyes, .bx-message-square-check{
     font-size: 100px;
     width: 100px;
     height: 100px;
@@ -152,6 +153,10 @@
 .bx-x{
     color: red;
 }
+.bx-message-square-check{
+    color: greenyellow
+}
+
 .checkout a button{
     padding: 10px;
     background-color: var(--main-button);
@@ -159,4 +164,8 @@
     border-radius: 7px;
     color: white;
     margin-bottom: 30px;
+    cursor: pointer;
+}
+.bxs-crown{
+    color: gold;
 }

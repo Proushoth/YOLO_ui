@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOLO</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/developer.css">
+    <link rel="stylesheet" href="css/creator.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/prompt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
 </head>
 <body>
     <div class="sidebar" id="sidebar">
-        <div class="logo">
-            <img src="assets/logo.png" alt="">
-        </div>
-        <div class="close" onclick="closeNav()"><i class="fa-solid fa-square-xmark"></i></div>
-        <div class="side-parent">
-            <div class="menu-option"><i class="fa-solid fa-house"></i><a href="home.html">Prompt</a></div>
-            <div class="menu-option"><i class="fa-solid fa-star"></i><a href="home.html">My Preference</a></div>
-            <div class="menu-option"><i class="fa-solid fa-crown"></i><a href="home.html">Get Premium</a></div>
-            <div class="menu-option"><i class="fa-solid fa-palette"></i><a href="home.html">Content Creator Portal</a></div>
-            <div class="menu-option"><i class="fa-solid fa-code"></i><a href="home.html">Developer Portal</a></div>
-        </div>
+        <!--sidebar loads here-->
     </div>
     <div class="content">
-        <div class="pop" onclick="openNav()"><i class="fa-solid fa-square-plus"></i></div>
-       <!--this is where my content should go-->
-       
+        <div class="pop" onclick="openNav()"><i class='bx bxs-hand-right'></i></div>
+        <div class="mob-area">
+            <!--this is where my new content should go-->
+            <div class="otp-top"><div class="otp-topic">2 step verification from Whatsapp</div><i class='bx bxl-whatsapp-square otp-icon'></i></div>
+            <div class="phoneInp">
+                <input type="tel" id="phoneNumber" onchange="updatePhone()">
+                <input type="hidden" id="countryCode" name="countryCode">
+            </div>
+            <span class="warning">*Do not repeat the country code | Enter number in given format</span>
+            <button id="getOtp" onclick="getOtp()">Get OTP</button>
+            <input type="number" id="otp" minlength="6" maxlength="6">
+           <button id="sub" onclick="setRole()">Unlock Creator</button>
+        </div>
     </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/creator.js"></script>
 </body>
 </html>

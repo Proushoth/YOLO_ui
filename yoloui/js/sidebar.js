@@ -21,3 +21,13 @@ function copyText() {
     document.execCommand("copy");
     inputField.blur();
 }
+
+const nav = document.getElementById("sidebar");
+fetch('sidebar.html')
+    .then(res => res.text()) // Invoke text() to get the text content
+    .then(data => {
+        nav.innerHTML = data;
+    })
+    .catch(error => {
+        console.error('Error fetching sidebar content:', error);
+    });

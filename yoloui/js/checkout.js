@@ -1,5 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const paymentType = urlParams.get('t');
+var lookup_key;
+var formData;
 
 function setTopicAndPrice(paymentType) {
     const topicElement = document.querySelector(".topic");
@@ -8,9 +10,11 @@ function setTopicAndPrice(paymentType) {
     if (paymentType === "premium") {
         topicElement.innerHTML = "Why not a premium package for just";
         priceElement.innerHTML = "$ 5";
+        lookup_key = "yolo_premium_test";
     } else if (paymentType === "boost") {
         topicElement.innerHTML = "Why not a boost package for just";
         priceElement.innerHTML = "$ 10";
+        lookup_key = "yolo_boost_test";
     } else {
         topicElement.innerHTML = "Choose your package";
         priceElement.innerHTML = "";
@@ -18,23 +22,23 @@ function setTopicAndPrice(paymentType) {
 }
 
 function premiumPay(){
-    
-    fetch('http://127.0.0.1:5000/create-checkout-session', {
+    formData = {
+        lookup_key : lookup_key
+    }
+    fetch('http://127.0.0.1:5000/collections', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(),
+            body: JSON.stringify(formData),
         })
         .then(response => response.json())
         .then(data => {
-            // Check if the login was successful
+            console.log(data)
             if (data.success) {
-                // Redirect to prompt.html
-                window.location.href = 'prompt.html';
+               window.location.href = data.url
             } else {
-                // Handle unsuccessful login (show error message, etc.)
-                alert('Login failed: ' + data.message);
+                
             }
         })
         .catch(error => {

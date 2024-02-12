@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family:Arial, Helvetica, sans-serif;
 
 }
 
@@ -23,7 +24,7 @@ body {
 .menu-option a{
     text-decoration: none;
     color: white;
-    font-family:Arial, Helvetica, sans-serif;
+    
 }
 .menu-option i{
     color: white;

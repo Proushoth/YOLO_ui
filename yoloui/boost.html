@@ -18,33 +18,24 @@
         <!--this is where my content should go-->
         <div class="mob-area">
             <div class="form-container">
-                <h2>Content Submission Form</h2>
                 <form id="content-form">
+                    <p>Inquire</p>
                     <label for="content-type">Content Type:</label>
                     <select id="content-type" name="content-type">
-                        <option value="movie">Movie</option>
-                        <option value="tv-series">TV Series</option>
                         <option value="song">Song</option>
-                        <option value="anime-movie">Anime Movie</option>
-                        <option value="anime-tv">Anime TV</option>
                         <option value="youtube-video">YouTube Video</option>
                     </select>
-        
                     <label for="content-url">Content Official URL:</label>
                     <input type="url" id="content-url" name="content-url" required>
-        
                     <label for="keywords">Keywords:</label>
                     <div id="keywords-container">
-                        <textarea id="keywords" name="keywords" rows="4" required></textarea>
+                        <textarea id="keywords" name="keywords" rows="4" placeholder="add keywords coma seperated"></textarea>
                     </div>
-        
-                    <input type="hidden" id="hidden-keywords" name="hidden-keywords">
-        
-                    <button type="submit">Submit</button>
+                    <button onclick="saveDataTest(event)">Submit</button>
                 </form>
             </div>
         </div>
-        
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="js/boost.js"></script>    
     <script src="js/sidebar.js"></script>
 </body>

@@ -17,13 +17,13 @@
         <!--this is where my content should go-->
         <div class="mob-area">
             <h2>Hey Developers</h2>
-            <input type="text"  value="3K4JB4H5VH4V4J6HVJ6HVJHV6JHV4" readonly id="inputField">
-            <button class="generate">Generate me a New API Token</button>
+            <input type="text"  value="" readonly id="inputField">
+            <button class="generate" onclick="getApiKey()">Generate me a New API Token</button>
             <button onclick="copyText()" class="copy"><i class='bx bxs-copy' ></i></button>
 
             <div class="more">
-                <div class="usage">
-                    <a href="usage.html">
+                <div class="usage" onclick="togglePopup()">
+                    <a>
                         <i class='bx bx-line-chart ics'></i>
                         <br>
                         <span>View Usage > </span>
@@ -42,8 +42,18 @@
         </div>
     </div>
     </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+          <span class="close-popup" onclick="togglePopup()">&times;</span>
+          <div class="use">My API Usage</div>
+          <canvas id="pieChart"></canvas>
+        </div>
+    </div>
     <img src="assets/load.gif" alt="" class="load">
     <div class="overlay"></div>
     <script src="js/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script  src="js/developer.js"></script>
 </body>
 </html>

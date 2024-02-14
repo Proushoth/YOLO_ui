@@ -22,7 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             // Check if the login was successful
             if (data.success) {
+                console.log(data)
+                admin_id = data.admin_id
+                admin_hash = data.admin_hash
                 // Redirect to prompt.html
+                Cookies.set("admin_id", admin_id, { expires: 7 }); 
+                Cookies.set("admin_hash", admin_hash, { expires: 7 });
                 window.location.href = 'admin-dashboard.html';
             } else {
                 // Handle unsuccessful login (show error message, etc.)

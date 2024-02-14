@@ -1,0 +1,83 @@
+/* content.css */
+.table-contents-main {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Added for positioning of pagination */
+    padding-bottom: 50px;
+}
+
+h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.action{
+    display: inline-flex;
+}
+.action button{
+    margin: 1px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+th, td {
+    transition: background-color 0.3s ease;
+}
+
+th:hover, td:hover {
+    background-color: #f0f0f0;
+}
+
+.dataTables_length,
+.dataTables_filter {
+    margin-bottom: 20px;
+}
+
+.dataTables_length select,
+.dataTables_filter input {
+    width: auto;
+    display: inline-block;
+}
+
+.dataTables_paginate {
+    float: right;
+    margin: 2px;
+}
+
+.dataTables_paginate .paginate_button {
+    background-color:rgb(186, 183, 183);
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1px;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background-color: rgb(171, 170, 170);
+}
+
+.dataTables_paginate .paginate_button.current {
+    background-color: rgb(167, 167, 167);
+}

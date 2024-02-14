@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create a Collection</title>
+<link rel="stylesheet" href="css/content.css">
+<link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <!--sidebar loads here-->
+    </div>
+    <div class="content">
+        <div class="pop" onclick="openNav()"><i class='bx bxs-hand-right'></i></div>
+        <!--this is where my content should go-->
+        <div class="table-contents-main">
+        <h2>Pending Requests</h2>
+        <table id="pendingTable">
+          <thead>
+            <tr>
+              <th>Content Type</th>
+              <th>Content URL</th>
+              <th>Creator Email</th>
+              <th>Keywords</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be populated dynamically -->
+          </tbody>
+        </table>
+
+        <h2>Approved Requests</h2>
+        <table id="approvedTable">
+          <thead>
+            <tr>
+              <th>Content Type</th>
+              <th>Content URL</th>
+              <th>Creator Email</th>
+              <th>Keywords</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be populated dynamically -->
+          </tbody>
+        </table>
+
+        <h2>Rejected Requests</h2>
+        <table id="rejectedTable">
+          <thead>
+            <tr>
+              <th>Content Type</th>
+              <th>Content URL</th>
+              <th>Creator Email</th>
+              <th>Keywords</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be populated dynamically -->
+          </tbody>
+        </table>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+    <script src="js/sidebar-admin.js"></script>
+    <script src="js/admin-content.js"></script>
+
+</body>
+</html>

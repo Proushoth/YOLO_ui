@@ -1,5 +1,5 @@
 const formData = {
-    "collection-name": "",
+    "title": "",
     "description": "",
     "keywords": "",
     "contents": {},
@@ -33,13 +33,13 @@ const formData = {
     document.querySelectorAll('.material-input').forEach((materialInput, index) => {
       const title = materialInput.querySelector('input[type="text"]:nth-child(1)').value;
       const link = materialInput.querySelector('input[type="text"]:nth-child(2)').value;
-      materials[`${index + 1}`] = { title, link };
+      materials[`material-${index + 1}`] = { title, link };
     });
-    formData.content = materials;
+    formData.contents = materials;
     console.log(formData);
   }
   
-  document.querySelectorAll('.form-group textarea, #collection-name, #duration, .form-group input[type="radio"]').forEach(input => {
+  document.querySelectorAll('.form-group textarea, #title, #duration, .form-group input[type="radio"]').forEach(input => {
     input.addEventListener('input', function() {
         formData[this.name] = this.value;
         console.log(formData);
@@ -59,7 +59,7 @@ function saveCollection(){
         })
         .then(response => response.json())
         .then(data => {
-            alert("collection Saved SuccessFully")
+            alert("collection Saved")
         })
         .catch(error => {
             console.error('Error excecution', error);

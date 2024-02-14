@@ -19,11 +19,11 @@
         <div class="form-container">
             <div class="form-column">
               <div class="form-group">
-                <label for="collection-name">Collection Name</label>
-                <input type="text" id="collection-name" name="collection-name">
+                <label>Collection Name</label>
+                <input type="text" id="title" name="title">
               </div>
               <div class="form-group">
-                <label for="collection-name">Duration</label>
+                <label>Duration</label>
                 <input type="text" id="duration" name="duration">
               </div>
               <div class="form-group">
@@ -43,7 +43,7 @@
                 <button id="add-material-btn">Add Material</button>
               </div>
               <div id="materials-container"></div>
-              <button class="save">Save Collection</button>
+              <button class="save" onclick="saveCollection()">Save Collection</button>
             </div>
           </div>
 

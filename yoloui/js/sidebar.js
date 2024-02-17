@@ -1,3 +1,15 @@
+// Create a new link element
+var linkElement = document.createElement('link');
+
+// Set the attributes for a CSS stylesheet
+linkElement.rel = 'stylesheet';
+linkElement.type = 'text/css';
+linkElement.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+
+// Append the link element to the head of the document
+document.head.appendChild(linkElement);
+
+
 setTimeout(function(){closeNav()}, 2000);
 
 function openNav(){
@@ -22,7 +34,10 @@ function copyText() {
     inputField.blur();
 }
 
+// Corrected import statement
+
 const nav = document.getElementById("sidebar");
+
 fetch('sidebar.html')
     .then(res => res.text()) // Invoke text() to get the text content
     .then(data => {
